@@ -1,6 +1,6 @@
-function copySessionID() {
+function myFunction() {
   // Get the text field
-  var copyText = "ee";
+  var copyText = document.getElementById("myInput");
 
   // Select the text field
   copyText.select();
