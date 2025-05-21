@@ -8,43 +8,41 @@ a {
     color: floralwhite;
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
+        .copy-container {
+            position: relative; /* Important for tooltip positioning */
+            display: inline-block; /* So it doesn't take full width */
+            margin: 20px;
+        }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 140px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -75px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
+        #copyButton {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
+        /* Tooltip styling */
+        #myTooltip {
+            visibility: hidden; /* Hidden by default */
+            width: 120px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position tooltip above the button */
+            left: 50%;
+            margin-left: -60px; /* Use half of the width to center the tooltip */
+            opacity: 0;
+            transition: opacity 0.3s; /* Smooth fade effect */
+        }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
+        /* Class to show the tooltip */
+        #myTooltip.show {
+            visibility: visible;
+            opacity: 1;
+        }
 
 .main {
     text-align: center;
