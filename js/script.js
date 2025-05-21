@@ -1,14 +1,14 @@
 function myFunction() {
   // Get the text field
-  var copyText = "test";
+  const predefinedText = "This is the text I want to copy!";
 
   // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
+  predefinedText.select();
+  predefinedText.setSelectionRange(0, 99999); // For mobile devices
 
    // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
+  navigator.clipboard.writeText(predefinedText.value);
 
   // Alert the copied text
-  alert("Copied the text: " + copyText.value);
+  alert("Copied the text: " + predefinedText.value);
 }
