@@ -1,14 +1,20 @@
-function myFunction() {
-  // Get the text field
+async function myFunction() {
   const predefinedText = "This is the text I want to copy!";
 
-  // Select the text field
-  predefinedText.select();
-  predefinedText.setSelectionRange(0, 99999); // For mobile devices
+ if (!navigator.clipboard) {
+    // Clipboard API not available
+    alert("Sorry, your browser does not support copying to clipboard this way. Please copy manually.");
+    console.error("Clipboard API not available.");
+    return;
+  }
 
-   // Copy the text inside the text field
-  navigator.clipboard.writeText(predefinedText.value);
+  try {
+    await navigator.clipboard.writeText(predefinedText);
 
-  // Alert the copied text
-  alert("Copied the text: " + predefinedText.value);
+    alert("Copied the text: " + predefinedText);
+    console.log("Text copied to clipboard: " + predefinedText);
+  } catch (err) {
+    console.error("Failed to copy text: ", err);
+    alert("Failed to copy text. See console for details.");
+  }
 }
