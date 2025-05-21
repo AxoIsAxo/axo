@@ -34,10 +34,3 @@ async function myFunction() { // Make the function async
     alert("Failed to copy text. See console for details.");
   }
 }
-
-function outFunc() {
-  var tooltip = document.getElementById("myTooltip");
-  if (tooltip) { // Good practice to check if the element exists
-    tooltip.innerHTML = "Copy to clipboard";
-  }
-}
