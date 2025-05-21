@@ -22,7 +22,7 @@ async function myFunction() { // Make the function async
 
     var tooltip = document.getElementById("myTooltip");
     if (tooltip) { // Check if tooltip exists
-      tooltip.innerHTML = "Copied: " + textToCopy; // Use the string itself
+      tooltip.innerHTML = "Copied ID"; // Use the string itself
     }
     console.log("Text copied to clipboard: " + textToCopy); // Optional: for debugging
   } catch (err) {
