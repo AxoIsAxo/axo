@@ -1,12 +1,9 @@
 # netlify.toml (in your repository root)
 
 [build]
-  # If you have NO build command (just static HTML, CSS, JS):
-  # command = "" # You can leave this out or set to an empty string if no build
-  publish = "html"
+  publish = "." # Publish the entire repository root
 
-  # If you HAVE a build command (e.g., for a static site generator, bundler):
-  # command = "your-build-command-here" # e.g., "npm run build", "hugo", "jekyll build"
-  # publish = "dist" # Or "public", "build", or whatever your build tool outputs to.
-                     # In this case, your build tool must put index.html in the root of 'dist'.
-                     # If your build tool *outputs* to `your-repo-root/html/`, then `publish = "html"` is still correct.
+[[redirects]]
+  from = "/"
+  to = "/html/index.html"
+  status = 200 # Serve the content of /html/index.html directly, not a 301/302 redirect
