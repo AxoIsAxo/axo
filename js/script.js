@@ -1,5 +1,5 @@
 async function myFunction() {
-    const textToCopy = "This is the text I want to copy!";
+    const textToCopy = "05a63c2bb6ae08897ee38b4d451a3665d0589cf2925c77db7c6682f05f74914d36";
     const tooltip = document.getElementById("myTooltip");
 
     if (!tooltip) {
@@ -28,7 +28,7 @@ async function myFunction() {
 
     try {
         await navigator.clipboard.writeText(textToCopy);
-        tooltip.innerHTML = "Copied!"; // Updated message
+        tooltip.innerHTML = "Session ID Copied!"; // Updated message
         console.log("Text copied to clipboard: " + textToCopy);
     } catch (err) {
         console.error("Failed to copy text: ", err);
