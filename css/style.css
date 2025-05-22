@@ -73,3 +73,7 @@ a {
     padding-right: 20px;
     cursor: pointer;
 }
+
+.ukrain-flag {
+    background-image: linear-gradient(to bottom, red 0%, red 50%, green 50%, green 100%);
+}
