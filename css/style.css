@@ -75,5 +75,5 @@ a {
 }
 
 .ukrain-flag {
-    background-image: linear-gradient(to bottom, red 0%, blue 50%, yellow 50%, yellow 100%);
+    background-image: linear-gradient(to bottom, blue 0%, blue 50%, yellow 50%, yellow 100%);
 }
